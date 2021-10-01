@@ -18,26 +18,13 @@ public class IntakeBrush extends SubsystemBase {
   /**
    * Creates a new IntakeBrush.
    */
-    public WPI_VictorSPX brush = new WPI_VictorSPX(Constants.INTAKE);
+   
     private double ramp = 0.2;
   
     public IntakeBrush() {
-    brush.configOpenloopRamp(ramp,0);
-    brush.setNeutralMode(NeutralMode.Brake);
+    //brush.configOpenloopRamp(ramp,0);
+    //brush.setNeutralMode(NeutralMode.Brake);
 
-  }
-
-  public void IntakeBrushIN(){
-    brush.set(-1);
-  }
-
-  public void IntakeBrushOUT(){
-    brush.set(1);
-    DriverStation.reportWarning("Brush" , false);
-  }
-
-  public void IntakeStop(){
-    brush.set(0);
   }
 
   @Override

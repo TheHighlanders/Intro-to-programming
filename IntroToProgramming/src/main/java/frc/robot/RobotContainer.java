@@ -32,9 +32,7 @@ public class RobotContainer {
   */
   private final OI m_OI = new OI();
   //private final Drive m_robotDrive = new Drive();
-  private final Conveyor m_Conveyor = new Conveyor();
   private final IntakeArm m_IntakeArm = new IntakeArm();
-  private final IntakeBrush m_IntakeBrush = new IntakeBrush();
   private Command m_autoCommand;
   
 
@@ -77,34 +75,19 @@ public class RobotContainer {
       Controller #2
       Intake in and out (Called Intaker IN and OUT on the Panel)
     */
-    JoystickButton IntakeIn = new JoystickButton(m_OI.Control2, Constants.INTAKE_IN_BUTTON);
-    JoystickButton IntakeOUT = new JoystickButton(m_OI.Control2, Constants.INTAKE_OUT_BUTTON);
-    IntakeIn.whileHeld(new IntakeInCMD(m_IntakeBrush));
-    IntakeOUT.whileHeld(new IntakeOutCmd(m_IntakeBrush));
     
     /*
       Controller #2
       Conveyor in and out
     */
-    JoystickButton ConveyorIn = new JoystickButton(m_OI.Control2, Constants.CONVERYOR_IN_BUTTON);
-    JoystickButton ConveyorOut = new JoystickButton(m_OI.Control2, Constants.CONVERYOR_OUT_BUTTON);
-    ConveyorIn.whileHeld(new ConveyorInCMD(m_Conveyor, -0.5));
-    ConveyorOut.whileHeld(new ConveyorOutCMD(m_Conveyor));
-
 
     /*
       Controller #1 Xbox
     */
-    JoystickButton xboxA = new JoystickButton(m_OI.xbox,1);
-    JoystickButton xboxB = new JoystickButton(m_OI.xbox,2);
-    JoystickButton xboxC = new JoystickButton(m_OI.xbox,3);
-    JoystickButton xboxD = new JoystickButton(m_OI.xbox,4);
+    JoystickButton xboxD = new JoystickButton(m_OI.xbox,4); //IntakeArm
     JoystickButton xboxLeftBumper = new JoystickButton(m_OI.xbox, 5);
     JoystickButton xboxRightBumper = new JoystickButton(m_OI.xbox, 6);
 
-    // xboxA.whileHeld(new ShootingGroup(m_Shooting, m_Conveyor, m_IntakeBrush, m_Door));
-    xboxB.whileHeld(new ConveyorInCMD(m_Conveyor, -0.5));
-    xboxC.whileHeld(new IntakeInCMD(m_IntakeBrush));
     xboxD.whileHeld(new IntakeArmUpCMD(m_IntakeArm));
   }
 

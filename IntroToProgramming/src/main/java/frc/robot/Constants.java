@@ -22,13 +22,12 @@ public final class Constants {
     public static final int RIGHT_WHEELS_1 = 44;//victor 
     public static final int RIGHT_WHEELS_2 = 50;//talon
 
-    public static final int DOOR = 45;
-
     public static final int INTAKE_ARM = 52;
 
-    public static final int INTAKE = 54;
+    //Intakebrush has port number 54
 
-    public static final int CONVEYOR = 46; 
+    //Conveyor has 46
+
 
 
     // Button Constants
@@ -39,8 +38,11 @@ public final class Constants {
 
 
     // Control 2
-    public static final int INTAKE_IN_BUTTON = 2;
-    public static final int INTAKE_OUT_BUTTON = 1;
-    public static final int CONVERYOR_IN_BUTTON = 4;
-    public static final int CONVERYOR_OUT_BUTTON = 3;
+    //Intake In (brushes) is button 2
+    //Intake Out (brushes) is button 1
+
+    
+    //ConveryorIn is button 4
+    //ConveryorOut is button 3
+
 }
