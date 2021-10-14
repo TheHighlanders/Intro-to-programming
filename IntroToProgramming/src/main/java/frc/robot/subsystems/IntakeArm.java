@@ -15,11 +15,22 @@ public class IntakeArm extends SubsystemBase {
   /**
    * Creates a new IntakeAuto.
    */
+ private WPI_VictorSPX intakeArm = new WPI_VictorSPX(Constants.INTAKE_ARM);
 
   public IntakeArm() {
 
   }
+ public void ArmUp() {
+   intakeArm.set(-1);
+ }
 
+ public void Armdown() {
+   intakeArm.set(1);
+ }
+
+ public void Armstop() {
+   intakeArm.set(0);
+ }
 
   @Override
   public void periodic() {
