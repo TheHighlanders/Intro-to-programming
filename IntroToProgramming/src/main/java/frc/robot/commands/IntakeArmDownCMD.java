@@ -31,12 +31,13 @@ public class IntakeArmDownCMD extends CommandBase {
   @Override
   public void execute() {
 
+    m_IntakeArm.Arm_move_down();
   }
 
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-
+    m_IntakeArm.Arm_move_stop();
   }
 
   // Returns true when the command should end.
