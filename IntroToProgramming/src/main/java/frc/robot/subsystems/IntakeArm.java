@@ -28,7 +28,7 @@ public class IntakeArm extends SubsystemBase {
     intakeArm.set(1);
   }
   
-  public void stop() {
+  public void ArmStop() {
     intakeArm.set(0); 
   }
   @Override
