@@ -14,7 +14,7 @@ import edu.wpi.first.wpilibj.DriverStation;
 public class IntakeArm extends SubsystemBase {
   /**
    * Creates a new IntakeAuto.
-   */private WPI_VictorSPX IntakeArm=new WPI_VictorSPX(Constants.INTAKE_ARM);
+   */private WPI_VictorSPX IntakeArm = new WPI_VictorSPX(Constants.INTAKE_ARM);
 
   public IntakeArm() {
     
@@ -36,7 +36,7 @@ DriverStation.reportWarning("mothership",false);
 
 
 public void Arm_move_stop(){ 
-IntakeArm.set(0);
+  IntakeArm.set(0);
 DriverStation.reportWarning("bull",false);
 }
   @Override
