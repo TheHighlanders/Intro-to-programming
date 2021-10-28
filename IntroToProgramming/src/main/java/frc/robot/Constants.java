@@ -21,7 +21,7 @@ public final class Constants {
     public static final int LEFT_WHEELS_2 = 51;//talon
     public static final int RIGHT_WHEELS_1 = 44;//victor 
     public static final int RIGHT_WHEELS_2 = 50;//talon
-
+    public static final int CONVEYOR = 46;
     public static final int INTAKE_ARM = 52;
 
     //Intakebrush has port number 54

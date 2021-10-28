@@ -24,7 +24,7 @@ public final class Main {
   }
   /*
  ________
-< hello there! >
+< hello der! >
  --------
 \                             .       .
  \                           / `.   .' " 
