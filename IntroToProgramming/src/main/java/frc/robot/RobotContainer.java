@@ -33,6 +33,7 @@ public class RobotContainer {
   private final OI m_OI = new OI();
   //private final Drive m_robotDrive = new Drive();
   private final IntakeArm m_IntakeArm = new IntakeArm();
+private final IntakeBrush m_IntakeBrush = new IntakeBrush();
   private Command m_autoCommand;
   
 
@@ -75,6 +76,10 @@ public class RobotContainer {
       Controller #2
       Intake in and out (Called Intaker IN and OUT on the Panel)
     */
+    JoystickButton IntakeBrushIn = new JoystickButton(m_OI.Control2,Constants.IntakeBrush);
+    JoystickButton IntakeBrushOUT = new JoystickButton(m_OI.Control2,Constants.IntakeBrushOUT);
+    IntakeBrush.whileHeld(new IntakeBrushCMD(m_IntakeBrush));
+    IntakeBrushOUT.whileHeld(new IntakeBrushOUTCMD(m_IntakeBrushOUT))
     
     /*
       Controller #2
