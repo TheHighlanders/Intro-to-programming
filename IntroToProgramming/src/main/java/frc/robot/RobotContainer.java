@@ -34,6 +34,8 @@ public class RobotContainer {
   //private final Drive m_robotDrive = new Drive();
   private final IntakeArm m_IntakeArm = new IntakeArm();
   private Command m_autoCommand;
+  private final IntakeBrush m_IntakeBrush = new IntakeBrush();
+  private final Conveyor m_Conveyor = new Conveyor();
   
 
   /**
@@ -75,12 +77,18 @@ public class RobotContainer {
       Controller #2
       Intake in and out (Called Intaker IN and OUT on the Panel)
     */
-    
+    JoystickButton IntakeIn = new JoystickButton(m_OI.Control2,Constants.INTAKE_BRUSH_IN);
+    JoystickButton IntakeOut = new JoystickButton(m_OI.Control2,Constants.INTAKE_BRUSH_OUT);
+    IntakeIn.whileHeld(new IntakeInCMD(m_IntakeBrush));
+    IntakeOut.whileHeld(new IntakeOutCMD(m_IntakeBrush));
     /*
       Controller #2
       Conveyor in and out
     */
-
+    JoystickButton ConveyorOut = new JoystickButton(m_OI.Control2,Constants.CONVEYOR_OUT);
+    JoystickButton ConveyorIn = new JoystickButton(m_OI.Control2,Constants.CONVEYOR_IN);
+    ConveyorIn.whileHeld(new ConveyorInCMD(m_Conveyor));
+    ConveyorOut.whileHeld(new ConveyorOutCMD(m_Conveyor));
     /*
       Controller #1 Xbox
     */

@@ -25,9 +25,9 @@ public final class Constants {
     public static final int INTAKE_ARM = 52;
 
     //Intakebrush has port number 54
-
+    public static final int INTAKE_BRUSH = 54;
     //Conveyor has 46
-
+    public static final int CONVEYOR = 46;
 
 
     // Button Constants
@@ -40,9 +40,11 @@ public final class Constants {
     // Control 2
     //Intake In (brushes) is button 2
     //Intake Out (brushes) is button 1
-
+    public static final int INTAKE_BRUSH_IN = 2;
+    public static final int INTAKE_BRUSH_OUT = 1;
     
     //ConveryorIn is button 4
     //ConveryorOut is button 3
-
+    public static final int CONVEYOR_IN = 4;
+    public static final int CONVEYOR_OUT = 3;
 }
