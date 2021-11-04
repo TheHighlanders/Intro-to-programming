@@ -15,9 +15,9 @@ public class IntakeArm extends SubsystemBase {
   /**
    * Creates a new IntakeAuto.
    */
-
+private WPI_VictorSPX intakeArm = new WPI_VictorSPX(Constants.INTAKE_ARM);
   public IntakeArm() {
-
+        
   }
 
 
