@@ -16,6 +16,7 @@ public class TeleopDriveCMD extends CommandBase {
   m_Drive = drive_subsystem;
   m_OI = xbox_oi;
     // Use addRequirements() here to declare subsystem dependencies.
+    addRequirements(m_Drive);
   }
 
   // Called when the command is initially scheduled.
